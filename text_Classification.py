@@ -19,6 +19,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 import matplotlib.pyplot as plt
 import seaborn as sns
+from deep_translator import GoogleTranslator
 
 # ============================================================================
 # FUNGSI 1: LOAD DATASET
@@ -72,6 +73,113 @@ def load_dataset(file_path):
     print()
     
     return df
+
+
+# ============================================================================
+# FUNGSI 1B: LOAD DATASET DARI INPUT USER
+# ============================================================================
+
+def load_dataset_from_input():
+    """
+    Membuat dataset dari input user dengan translate otomatis
+    
+    Return:
+        DataFrame: Data dengan kolom 'text' dan 'label'
+    """
+    print("=" * 80)
+    print("📝 INPUT DATASET MANUAL")
+    print("=" * 80)
+    print("Masukkan kalimat dalam bahasa Indonesia (ketik 'selesai' untuk berhenti)")
+    print()
+    
+    texts = []
+    labels = []
+    translator = GoogleTranslator(source='id', target='en')
+    
+    count = 1
+    while True:
+        print(f"\n--- Data ke-{count} ---")
+        text_id = input("Kalimat Indonesia: ")
+        
+        if text_id.lower() == 'selesai':
+            break
+        
+        if text_id.strip() == "":
+            print("❌ Teks tidak boleh kosong!")
+            continue
+        
+        # Translate otomatis
+        print("🔄 Menerjemahkan...")
+        try:
+            text_en = translator.translate(text_id)
+            print(f"✅ Hasil translate: {text_en}")
+            
+            # Tambahkan ke dataset
+            texts.append(text_id)
+            labels.append('Indonesian')
+            texts.append(text_en)
+            labels.append('English')
+            
+            count += 1
+        except Exception as e:
+            print(f"❌ Error translate: {e}")
+            continue
+    
+    # Buat DataFrame
+    df = pd.DataFrame({
+        'text': texts,
+        'label': labels
+    })
+    
+    print("\n" + "=" * 80)
+    print(f"✅ Dataset berhasil dibuat!")
+    print(f"📊 Total data: {len(df)}")
+    print(f"   - Indonesian: {len(df[df['label'] == 'Indonesian'])}")
+    print(f"   - English: {len(df[df['label'] == 'English'])}")
+    print("=" * 80)
+    print()
+    
+    return df
+
+
+# ============================================================================
+# FUNGSI 1C: PILIH SUMBER DATASET
+# ============================================================================
+
+def choose_dataset_source():
+    """
+    Memilih sumber dataset: dari file JSON atau input manual
+    
+    Return:
+        DataFrame: Data dengan kolom 'text' dan 'label'
+    """
+    print("\n")
+    print("=" * 80)
+    print("           🌐 LANGUAGE DETECTION - NAIVE BAYES")
+    print("           Kelompok 5 - Project Capstone Bu Erna")
+    print("=" * 80)
+    print()
+    print("PILIH SUMBER DATASET:")
+    print("1. Load dari file dataset.json (50 pasangan kalimat)")
+    print("2. Input manual dengan translate otomatis")
+    print()
+    
+    while True:
+        pilihan = input("Pilih opsi (1/2): ")
+        
+        if pilihan == '1':
+            return load_dataset('dataset.json')
+        elif pilihan == '2':
+            df = load_dataset_from_input()
+            if len(df) < 10:
+                print("\n⚠️  WARNING: Dataset terlalu sedikit (minimal 10 pasangan kalimat)")
+                print("Untuk hasil yang baik, masukkan minimal 10 kalimat.\n")
+                ulang = input("Mau input lagi? (y/n): ")
+                if ulang.lower() == 'y':
+                    continue
+            return df
+        else:
+            print("❌ Pilihan tidak valid! Pilih 1 atau 2.\n")
 
 
 # ============================================================================
@@ -363,15 +471,8 @@ def main():
     """
     Fungsi utama program
     """
-    print("\n")
-    print("=" * 80)
-    print("           🌐 LANGUAGE DETECTION - NAIVE BAYES")
-    print("           Kelompok 5 - Project Capstone Bu Erna")
-    print("=" * 80)
-    print()
-    
-    # 1. Load Dataset
-    df = load_dataset('dataset.json')
+    # 1. Pilih Sumber Dataset (dari file atau input manual)
+    df = choose_dataset_source()
     
     # 2. Preprocessing (sudah dilakukan di dalam fungsi)
     df['text'] = df['text'].apply(preprocess_text)
