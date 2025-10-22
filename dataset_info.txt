@@ -1,0 +1,56 @@
+DATASET TRANSLATE INDONESIA → ENGLISH
+=====================================
+
+Kelompok 5 - Project Capstone Bu Erna
+Bidang NLP: Machine Translation
+
+INFORMASI DATASET:
+------------------
+- Nama File: dataset.csv
+- Format: CSV (Comma Separated Values)
+- Total Data: 50 pasangan kalimat
+- Kolom: no, indonesia, english
+
+KATEGORI DATA:
+--------------
+1. Kalimat Sehari-hari (1-30)
+   - Sapaan dan percakapan umum
+   - Aktivitas harian
+   - Keluarga dan kehidupan
+   - Hobi dan kegiatan
+
+2. Kalimat Teknologi & NLP (31-45)
+   - Pemrograman dan coding
+   - Artificial Intelligence
+   - Machine Learning
+   - Data Science
+   - Teknologi modern
+
+3. Kalimat Umum (46-50)
+   - Hobi dan minat
+   - Pengetahuan umum
+
+CARA MENGGUNAKAN:
+-----------------
+1. Buka file dataset.csv dengan Excel/Google Sheets
+2. Kolom "indonesia" = teks asli dalam bahasa Indonesia
+3. Kolom "english" = terjemahan manual dalam bahasa Inggris
+4. Gunakan untuk testing program translate
+
+CONTOH ISI DATASET:
+-------------------
+no,indonesia,english
+1,Halo apa kabar?,Hello how are you?
+2,Saya suka belajar pemrograman,I like to learn programming
+3,Cuaca hari ini sangat cerah,The weather is very sunny today
+...
+
+KEGUNAAN DATASET:
+-----------------
+✅ Testing program translate dengan banyak data
+✅ Evaluasi kualitas hasil translate
+✅ Demonstrasi program untuk berbagai jenis kalimat
+✅ Dokumentasi untuk presentasi/laporan
+
+=====================================
+Dibuat: Oktober 2025

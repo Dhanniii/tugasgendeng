@@ -1,0 +1,603 @@
+================================================================================
+        PENJELASAN CODE PROGRAM TRANSLATE (Line by Line)
+        Kelompok 5 - Project Capstone Bu Erna
+        Untuk Pemula - Mudah Dipahami
+================================================================================
+
+FILE: translate_app.py
+----------------------
+
+================================================================================
+BARIS 1: Import Library
+================================================================================
+from deep_translator import GoogleTranslator
+
+PENJELASAN:
+- "from deep_translator" = Ambil dari library deep-translator
+- "import GoogleTranslator" = Ambil class GoogleTranslator
+- GoogleTranslator = Alat untuk translate menggunakan Google Translate
+- Harus install dulu: pip install deep-translator
+
+ANALOGI:
+Seperti meminjam alat dari toko. Kita pinjam "GoogleTranslator" dari 
+toko "deep_translator" untuk dipakai translate.
+
+
+================================================================================
+BARIS 3-17: Fungsi tampilkan_header()
+================================================================================
+
+BARIS 3:
+def tampilkan_header():
+
+PENJELASAN:
+- "def" = Keyword untuk membuat fungsi (function)
+- "tampilkan_header" = Nama fungsi yang kita buat
+- "()" = Tidak ada parameter (tidak perlu input)
+- ":" = Tanda mulai isi fungsi
+
+ANALOGI:
+Seperti membuat resep masakan dengan nama "tampilkan_header".
+
+
+---
+
+BARIS 4:
+    """Menampilkan header ASCII art"""
+
+PENJELASAN:
+- Ini adalah docstring (dokumentasi fungsi)
+- Ditulis dengan 3 tanda petik """
+- Menjelaskan apa fungsi ini untuk apa
+
+ANALOGI:
+Seperti menulis "Resep ini untuk membuat nasi goreng" di resep masakan.
+
+
+---
+
+BARIS 5:
+    print("=" * 60)
+
+PENJELASAN:
+- "print()" = Perintah untuk menampilkan ke layar
+- "=" * 60 = Cetak tanda "=" sebanyak 60 kali
+- Hasilnya: ============================================================
+
+ANALOGI:
+Seperti menulis garis pembatas di kertas.
+
+
+---
+
+BARIS 6-13:
+    print("""
+    [ASCII ART DISINI]
+    """)
+
+PENJELASAN:
+- print(""" ... """) = Cetak teks multi-line (banyak baris)
+- Isi nya adalah ASCII art tulisan "TRANSLATE"
+- ASCII art = Gambar yang dibuat dari karakter keyboard
+
+ANALOGI:
+Seperti membuat gambar dari huruf dan simbol di kertas.
+
+
+---
+
+BARIS 14-16:
+    print("=" * 60)
+    print("        Kelompok 5 - Project Capstone Bu Erna")
+    print("=" * 60)
+
+PENJELASAN:
+- Cetak garis pembatas lagi
+- Cetak judul kelompok
+- Cetak garis pembatas lagi
+- Spasi di awal untuk membuat teks di tengah
+
+ANALOGI:
+Seperti membuat judul yang dikasih border atas dan bawah.
+
+
+---
+
+BARIS 17:
+    print()
+
+PENJELASAN:
+- print() tanpa isi = Cetak baris kosong
+- Untuk memberi jarak/spasi
+
+ANALOGI:
+Seperti enter/spasi di Word untuk memberi jarak.
+
+
+================================================================================
+BARIS 19-28: Fungsi tampilkan_anggota()
+================================================================================
+
+BARIS 19:
+def tampilkan_anggota():
+
+PENJELASAN:
+- Membuat fungsi baru bernama "tampilkan_anggota"
+- Fungsi ini untuk menampilkan daftar anggota kelompok
+
+
+---
+
+BARIS 20:
+    """Menampilkan daftar anggota kelompok"""
+
+PENJELASAN:
+- Docstring (dokumentasi) fungsi
+
+
+---
+
+BARIS 21-27:
+    print("Anggota Kelompok:")
+    print("-" * 60)
+    print("1. Nama Anggota 1 (NPM: 123456789)")
+    print("2. Nama Anggota 2 (NPM: 123456790)")
+    print("3. Nama Anggota 3 (NPM: 123456791)")
+    print("4. Nama Anggota 4 (NPM: 123456792)")
+    print("-" * 60)
+
+PENJELASAN:
+- Cetak judul "Anggota Kelompok:"
+- Cetak garis pembatas (60 tanda -)
+- Cetak 4 nama anggota dengan NPM
+- Cetak garis pembatas lagi
+
+CATATAN:
+Ganti nama dan NPM sesuai anggota kelompok kalian!
+
+
+---
+
+BARIS 28:
+    print()
+
+PENJELASAN:
+- Cetak baris kosong untuk jarak
+
+
+================================================================================
+BARIS 30-37: Fungsi translate_id_ke_en()
+================================================================================
+
+BARIS 30:
+def translate_id_ke_en(teks):
+
+PENJELASAN:
+- Membuat fungsi bernama "translate_id_ke_en"
+- "(teks)" = Parameter/input fungsi
+- Fungsi ini menerima input berupa teks yang mau ditranslate
+
+ANALOGI:
+Seperti mesin penerjemah. Kita kasih teks Indonesia, dia kasih hasil English.
+
+
+---
+
+BARIS 31:
+    """Fungsi untuk translate dari Indonesia ke English"""
+
+PENJELASAN:
+- Docstring fungsi
+
+
+---
+
+BARIS 32:
+    try:
+
+PENJELASAN:
+- "try" = Coba jalankan code di bawah ini
+- Kalau ada error, akan ditangani di "except"
+
+ANALOGI:
+Seperti "coba dulu, kalau gagal ada rencana B".
+
+
+---
+
+BARIS 33:
+        translator = GoogleTranslator(source='id', target='en')
+
+PENJELASAN:
+- "translator" = Variabel untuk menyimpan translator
+- "GoogleTranslator()" = Buat translator baru
+- "source='id'" = Bahasa asal adalah Indonesia
+- "target='en'" = Bahasa tujuan adalah English
+
+ANALOGI:
+Seperti setting mesin penerjemah: dari Indonesia ke Inggris.
+
+
+---
+
+BARIS 34:
+        hasil = translator.translate(teks)
+
+PENJELASAN:
+- "hasil" = Variabel untuk menyimpan hasil translate
+- "translator.translate(teks)" = Translate teks yang diinput
+- Hasil translate disimpan di variabel "hasil"
+
+ANALOGI:
+Mesin penerjemah bekerja dan hasilnya disimpan.
+
+
+---
+
+BARIS 35:
+        return hasil
+
+PENJELASAN:
+- "return" = Kembalikan nilai
+- Fungsi ini mengembalikan hasil translate
+- Nilai ini bisa dipakai di tempat lain
+
+ANALOGI:
+Seperti mesin kasih hasil terjemahan ke kita.
+
+
+---
+
+BARIS 36-37:
+    except Exception as e:
+        return f"Error: {e}"
+
+PENJELASAN:
+- "except" = Kalau ada error, jalankan ini
+- "Exception as e" = Tangkap error dan simpan di variabel "e"
+- "return f"Error: {e}"" = Kembalikan pesan error
+- "f"..."" = f-string untuk memasukkan variabel ke dalam teks
+
+ANALOGI:
+Kalau mesin rusak, kasih tau "Error: [alasan error]".
+
+
+================================================================================
+BARIS 39-67: Fungsi main() - Program Utama
+================================================================================
+
+BARIS 39:
+def main():
+
+PENJELASAN:
+- Membuat fungsi utama program
+- Semua program akan jalan dari sini
+
+
+---
+
+BARIS 40:
+    """Fungsi utama program"""
+
+PENJELASAN:
+- Docstring fungsi
+
+
+---
+
+BARIS 41-42:
+    tampilkan_header()
+    tampilkan_anggota()
+
+PENJELASAN:
+- Panggil fungsi "tampilkan_header()" untuk cetak header
+- Panggil fungsi "tampilkan_anggota()" untuk cetak anggota
+- Fungsi dipanggil dengan menulis nama fungsi + ()
+
+ANALOGI:
+Seperti memanggil orang untuk melakukan tugasnya.
+
+
+---
+
+BARIS 44-46:
+    print("Program Translate Indonesia → English")
+    print("=" * 60)
+    print()
+
+PENJELASAN:
+- Cetak judul program
+- Cetak garis pembatas
+- Cetak baris kosong
+
+
+---
+
+BARIS 48:
+    while True:
+
+PENJELASAN:
+- "while" = Loop/perulangan
+- "True" = Selama kondisi True (selalu benar)
+- Artinya: Loop ini akan jalan terus sampai ada perintah "break"
+
+ANALOGI:
+Seperti mesin yang jalan terus sampai kita matikan.
+
+
+---
+
+BARIS 49-50:
+        print("Masukkan teks dalam bahasa Indonesia (atau ketik 'exit' untuk keluar):")
+        teks_input = input(">> ")
+
+PENJELASAN:
+- Cetak instruksi untuk user
+- "input(">> ")" = Minta user ketik sesuatu
+- "teks_input" = Simpan apa yang user ketik di variabel ini
+- ">>" = Prompt/tanda untuk user
+
+ANALOGI:
+Seperti kasir tanya "Mau pesan apa?" dan tunggu jawaban.
+
+
+---
+
+BARIS 52-54:
+        if teks_input.lower() == 'exit':
+            print("\nTerima kasih telah menggunakan program ini!")
+            break
+
+PENJELASAN:
+- "if" = Kalau kondisi benar, jalankan code di bawah
+- "teks_input.lower()" = Ubah input jadi huruf kecil semua
+- "== 'exit'" = Cek apakah sama dengan 'exit'
+- Kalau user ketik "exit" atau "EXIT" atau "Exit", program berhenti
+- "break" = Keluar dari loop
+
+ANALOGI:
+Kalau customer bilang "sudah selesai", kasir berhenti tanya.
+
+
+---
+
+BARIS 56-58:
+        if teks_input.strip() == "":
+            print("Teks tidak boleh kosong!\n")
+            continue
+
+PENJELASAN:
+- "teks_input.strip()" = Hapus spasi di awal dan akhir
+- "== """ = Cek apakah kosong
+- Kalau user tidak ketik apa-apa (kosong), kasih peringatan
+- "continue" = Lanjut ke loop berikutnya (ulang dari awal)
+- "\n" = Baris baru
+
+ANALOGI:
+Kalau customer diam aja, kasir bilang "harus pesan sesuatu".
+
+
+---
+
+BARIS 60-61:
+        print("\nMenerjemahkan...")
+        hasil_translate = translate_id_ke_en(teks_input)
+
+PENJELASAN:
+- Cetak "Menerjemahkan..." untuk kasih tau user program sedang proses
+- Panggil fungsi "translate_id_ke_en()" dengan input "teks_input"
+- Hasil translate disimpan di variabel "hasil_translate"
+
+ANALOGI:
+Kasir bilang "tunggu sebentar" lalu proses pesanan.
+
+
+---
+
+BARIS 63-66:
+        print("-" * 60)
+        print(f"Teks Asli (ID): {teks_input}")
+        print(f"Hasil (EN)    : {hasil_translate}")
+        print("-" * 60)
+
+PENJELASAN:
+- Cetak garis pembatas
+- Cetak teks asli (Indonesia) yang user input
+- Cetak hasil translate (English)
+- f"..." = f-string untuk memasukkan variabel ke dalam teks
+- {teks_input} = Isi variabel teks_input
+- {hasil_translate} = Isi variabel hasil_translate
+- Cetak garis pembatas lagi
+
+ANALOGI:
+Kasir kasih hasil pesanan dengan rapi.
+
+
+---
+
+BARIS 67:
+        print()
+
+PENJELASAN:
+- Cetak baris kosong untuk jarak
+- Setelah ini loop akan ulang lagi dari baris 49
+
+
+================================================================================
+BARIS 69-70: Menjalankan Program
+================================================================================
+
+BARIS 69:
+if __name__ == "__main__":
+
+PENJELASAN:
+- Ini adalah "entry point" program
+- "__name__" = Variabel special Python
+- "__main__" = Nilai __name__ kalau file dijalankan langsung
+- Artinya: Kalau file ini dijalankan langsung, jalankan code di bawah
+
+ANALOGI:
+Seperti tombol "Start" di mesin. Kalau tombol ditekan, mesin nyala.
+
+
+---
+
+BARIS 70:
+    main()
+
+PENJELASAN:
+- Panggil fungsi "main()" untuk mulai program
+- Program akan jalan dari sini
+
+
+================================================================================
+ALUR PROGRAM SECARA KESELURUHAN
+================================================================================
+
+1. Import library deep-translator (baris 1)
+
+2. Buat 3 fungsi:
+   - tampilkan_header() = Tampilkan judul ASCII art
+   - tampilkan_anggota() = Tampilkan daftar anggota
+   - translate_id_ke_en() = Fungsi translate Indonesia ke English
+
+3. Buat fungsi main() yang berisi:
+   - Tampilkan header dan anggota
+   - Loop terus menerus:
+     * Minta user input teks Indonesia
+     * Kalau user ketik "exit", program berhenti
+     * Kalau input kosong, minta input lagi
+     * Kalau input valid, translate dan tampilkan hasil
+     * Ulang lagi
+
+4. Jalankan fungsi main() kalau file dijalankan langsung
+
+
+================================================================================
+CARA KERJA PROGRAM
+================================================================================
+
+USER                    PROGRAM                     GOOGLE TRANSLATE
+----                    -------                     ----------------
+                        
+Jalankan program  -->   Tampilkan header
+                        Tampilkan anggota
+                        Minta input
+
+Ketik: "Halo"     -->   Terima input "Halo"
+                        Kirim ke GoogleTranslator  -->  Translate
+                        Terima hasil               <--  "Hello"
+                        Tampilkan hasil
+                        Minta input lagi
+
+Ketik: "exit"     -->   Keluar program
+                        Selesai
+
+
+================================================================================
+TIPS UNTUK PEMULA
+================================================================================
+
+1. VARIABEL
+   - Seperti kotak untuk menyimpan data
+   - Contoh: teks_input, hasil_translate
+
+2. FUNGSI
+   - Seperti resep atau prosedur
+   - Bisa dipanggil berkali-kali
+   - Contoh: def tampilkan_header()
+
+3. LOOP (while)
+   - Perulangan
+   - Jalankan code berulang-ulang
+   - Berhenti kalau ada "break"
+
+4. KONDISI (if)
+   - Cek kondisi
+   - Kalau benar, jalankan code
+   - Contoh: if teks_input == 'exit'
+
+5. TRY-EXCEPT
+   - Coba jalankan code
+   - Kalau error, tangani dengan except
+   - Biar program tidak crash
+
+6. F-STRING
+   - Cara mudah memasukkan variabel ke teks
+   - Contoh: f"Hasil: {hasil_translate}"
+
+
+================================================================================
+ISTILAH PENTING
+================================================================================
+
+- IMPORT = Ambil library/modul dari luar
+- DEF = Buat fungsi baru
+- PRINT = Tampilkan ke layar
+- INPUT = Minta user ketik sesuatu
+- RETURN = Kembalikan nilai dari fungsi
+- IF = Kalau kondisi benar
+- WHILE = Loop selama kondisi benar
+- BREAK = Keluar dari loop
+- CONTINUE = Lanjut ke loop berikutnya
+- TRY-EXCEPT = Tangani error
+- VARIABLE = Tempat menyimpan data
+- STRING = Teks (kata/kalimat)
+- FUNCTION = Fungsi/prosedur
+
+
+================================================================================
+PERTANYAAN UMUM
+================================================================================
+
+Q: Kenapa pakai "def"?
+A: "def" adalah keyword Python untuk membuat fungsi.
+
+Q: Apa itu "while True"?
+A: Loop yang jalan terus sampai ada "break".
+
+Q: Kenapa pakai "try-except"?
+A: Biar kalau ada error (misal internet mati), program tidak crash.
+
+Q: Apa bedanya "print" dan "return"?
+A: - print = Tampilkan ke layar
+   - return = Kembalikan nilai dari fungsi
+
+Q: Kenapa ada "if __name__ == "__main__""?
+A: Biar code hanya jalan kalau file dijalankan langsung, bukan di-import.
+
+
+================================================================================
+MODIFIKASI YANG BISA DILAKUKAN
+================================================================================
+
+1. Ganti nama dan NPM anggota (baris 23-26)
+
+2. Tambah bahasa lain:
+   - Ganti 'id' jadi 'ja' untuk Jepang
+   - Ganti 'en' jadi 'es' untuk Spanyol
+
+3. Tambah fitur:
+   - Hitung jumlah kata
+   - Simpan history translate
+   - Export hasil ke file
+
+4. Ubah tampilan:
+   - Ganti ASCII art
+   - Tambah warna (pakai library colorama)
+
+
+================================================================================
+SUMBER BELAJAR LEBIH LANJUT
+================================================================================
+
+1. Python Official Documentation: https://docs.python.org
+2. W3Schools Python Tutorial: https://www.w3schools.com/python/
+3. Real Python: https://realpython.com
+4. Deep Translator Docs: https://deep-translator.readthedocs.io
+
+
+================================================================================
+                            SELESAI
+        Semoga penjelasan ini membantu memahami code!
+================================================================================

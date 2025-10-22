@@ -1,0 +1,261 @@
+{
+  "metadata": {
+    "title": "Dataset Translate Indonesia → English",
+    "kelompok": "Kelompok 5 - Project Capstone Bu Erna",
+    "bidang_nlp": "Machine Translation",
+    "total_data": 50,
+    "tanggal": "Oktober 2025"
+  },
+  "data": [
+    {
+      "no": 1,
+      "indonesia": "Halo apa kabar?",
+      "english": "Hello how are you?"
+    },
+    {
+      "no": 2,
+      "indonesia": "Saya suka belajar pemrograman",
+      "english": "I like to learn programming"
+    },
+    {
+      "no": 3,
+      "indonesia": "Cuaca hari ini sangat cerah",
+      "english": "The weather is very sunny today"
+    },
+    {
+      "no": 4,
+      "indonesia": "Selamat pagi semua",
+      "english": "Good morning everyone"
+    },
+    {
+      "no": 5,
+      "indonesia": "Terima kasih atas bantuannya",
+      "english": "Thank you for your help"
+    },
+    {
+      "no": 6,
+      "indonesia": "Saya sedang belajar bahasa Inggris",
+      "english": "I am learning English"
+    },
+    {
+      "no": 7,
+      "indonesia": "Dia pergi ke sekolah setiap hari",
+      "english": "He goes to school every day"
+    },
+    {
+      "no": 8,
+      "indonesia": "Kami makan siang bersama",
+      "english": "We have lunch together"
+    },
+    {
+      "no": 9,
+      "indonesia": "Buku ini sangat menarik",
+      "english": "This book is very interesting"
+    },
+    {
+      "no": 10,
+      "indonesia": "Saya suka membaca novel",
+      "english": "I like reading novels"
+    },
+    {
+      "no": 11,
+      "indonesia": "Mereka bermain sepak bola di lapangan",
+      "english": "They play football on the field"
+    },
+    {
+      "no": 12,
+      "indonesia": "Ibu saya memasak makanan enak",
+      "english": "My mother cooks delicious food"
+    },
+    {
+      "no": 13,
+      "indonesia": "Ayah saya bekerja di kantor",
+      "english": "My father works in an office"
+    },
+    {
+      "no": 14,
+      "indonesia": "Adik saya masih kecil",
+      "english": "My younger sibling is still small"
+    },
+    {
+      "no": 15,
+      "indonesia": "Kakak saya kuliah di universitas",
+      "english": "My older sibling studies at university"
+    },
+    {
+      "no": 16,
+      "indonesia": "Hari ini adalah hari yang indah",
+      "english": "Today is a beautiful day"
+    },
+    {
+      "no": 17,
+      "indonesia": "Saya ingin pergi ke pantai",
+      "english": "I want to go to the beach"
+    },
+    {
+      "no": 18,
+      "indonesia": "Mereka sedang menonton film",
+      "english": "They are watching a movie"
+    },
+    {
+      "no": 19,
+      "indonesia": "Komputer saya rusak kemarin",
+      "english": "My computer broke yesterday"
+    },
+    {
+      "no": 20,
+      "indonesia": "Saya harus mengerjakan tugas",
+      "english": "I have to do my homework"
+    },
+    {
+      "no": 21,
+      "indonesia": "Dia sangat pintar dalam matematika",
+      "english": "He is very smart in mathematics"
+    },
+    {
+      "no": 22,
+      "indonesia": "Kami akan pergi berlibur minggu depan",
+      "english": "We will go on vacation next week"
+    },
+    {
+      "no": 23,
+      "indonesia": "Saya suka mendengarkan musik",
+      "english": "I like listening to music"
+    },
+    {
+      "no": 24,
+      "indonesia": "Mereka belajar di perpustakaan",
+      "english": "They study in the library"
+    },
+    {
+      "no": 25,
+      "indonesia": "Guru saya sangat baik",
+      "english": "My teacher is very kind"
+    },
+    {
+      "no": 26,
+      "indonesia": "Saya bangun pagi setiap hari",
+      "english": "I wake up early every day"
+    },
+    {
+      "no": 27,
+      "indonesia": "Dia membeli buku baru",
+      "english": "She bought a new book"
+    },
+    {
+      "no": 28,
+      "indonesia": "Kami bermain game bersama",
+      "english": "We play games together"
+    },
+    {
+      "no": 29,
+      "indonesia": "Saya suka makan nasi goreng",
+      "english": "I like eating fried rice"
+    },
+    {
+      "no": 30,
+      "indonesia": "Mereka pergi ke taman",
+      "english": "They go to the park"
+    },
+    {
+      "no": 31,
+      "indonesia": "Pemrosesan Bahasa Alami adalah cabang AI",
+      "english": "Natural Language Processing is a branch of AI"
+    },
+    {
+      "no": 32,
+      "indonesia": "Machine learning sangat penting",
+      "english": "Machine learning is very important"
+    },
+    {
+      "no": 33,
+      "indonesia": "Teknologi berkembang sangat cepat",
+      "english": "Technology develops very quickly"
+    },
+    {
+      "no": 34,
+      "indonesia": "Saya belajar coding setiap hari",
+      "english": "I learn coding every day"
+    },
+    {
+      "no": 35,
+      "indonesia": "Python adalah bahasa pemrograman populer",
+      "english": "Python is a popular programming language"
+    },
+    {
+      "no": 36,
+      "indonesia": "Data science adalah bidang yang menarik",
+      "english": "Data science is an interesting field"
+    },
+    {
+      "no": 37,
+      "indonesia": "Kecerdasan buatan mengubah dunia",
+      "english": "Artificial intelligence is changing the world"
+    },
+    {
+      "no": 38,
+      "indonesia": "Saya suka belajar hal baru",
+      "english": "I like learning new things"
+    },
+    {
+      "no": 39,
+      "indonesia": "Internet sangat berguna",
+      "english": "The internet is very useful"
+    },
+    {
+      "no": 40,
+      "indonesia": "Smartphone memudahkan komunikasi",
+      "english": "Smartphones make communication easier"
+    },
+    {
+      "no": 41,
+      "indonesia": "Aplikasi mobile sangat populer",
+      "english": "Mobile applications are very popular"
+    },
+    {
+      "no": 42,
+      "indonesia": "Website ini sangat informatif",
+      "english": "This website is very informative"
+    },
+    {
+      "no": 43,
+      "indonesia": "Saya menggunakan laptop untuk bekerja",
+      "english": "I use a laptop to work"
+    },
+    {
+      "no": 44,
+      "indonesia": "Email adalah alat komunikasi penting",
+      "english": "Email is an important communication tool"
+    },
+    {
+      "no": 45,
+      "indonesia": "Media sosial menghubungkan orang",
+      "english": "Social media connects people"
+    },
+    {
+      "no": 46,
+      "indonesia": "Saya suka fotografi",
+      "english": "I like photography"
+    },
+    {
+      "no": 47,
+      "indonesia": "Video game sangat menghibur",
+      "english": "Video games are very entertaining"
+    },
+    {
+      "no": 48,
+      "indonesia": "Musik membuat saya bahagia",
+      "english": "Music makes me happy"
+    },
+    {
+      "no": 49,
+      "indonesia": "Olahraga itu menyehatkan",
+      "english": "Exercise is healthy"
+    },
+    {
+      "no": 50,
+      "indonesia": "Membaca buku menambah pengetahuan",
+      "english": "Reading books increases knowledge"
+    }
+  ]
+}
